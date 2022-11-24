@@ -3,27 +3,22 @@
 */
 /* Clases basicas */
 /* contructor de la clase */
-class Heroe {
-  /* alterEgo: string;
-    edad: number;
-    nombreReal: string;
-
+/* Extender clases */
+class PersonaNormal {
     constructor(
-        alterEgo: string,
-        edad: number,
-        nombreReal: string
-    ) {
-        this.alterEgo = alterEgo;
-    }
-    // forma tradicional de definir un constructor
-    */
+        public nombre: string,
+        public direccion: string
+    ) { }
+}
 
-  // forma simplificada de definir un constructor
+class Heroe extends PersonaNormal {
   constructor(
     public alterEgo: string,
     public edad: number,
     public nombreReal: string
-  ) {}
+  ) {
+    super(nombreReal, 'New York, USA');
+  }
 }
 const ironman = new Heroe("Ironman", 45, "Tony");
 console.log(ironman);
